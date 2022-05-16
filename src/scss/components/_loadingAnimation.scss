@@ -1,0 +1,35 @@
+.loadingAnimation{
+    width: 100px;
+    height:30px;
+    border-radius:3px;
+    line-height: 30px;
+    margin: 0 auto;
+  }
+  .dots{
+    display: inline-block;
+    width : 10px;
+    height : 10px;
+    background-color: $senary;
+    border-radius: 50%;
+    animation : loading 1s infinite linear alternate;
+    &:nth-child(2){
+        margin: 0 10px;
+    }
+  }
+  .dots:nth-child(1){
+    animation-delay : 0;
+  }
+  .dots:nth-child(2){
+    animation-delay : 0.5s;
+  }
+  .dots:nth-child(3){
+    animation-delay : 1s;
+  }
+  @keyframes loading {
+    0% {
+      background-color: $senary;
+    }
+    50%,100% {
+      background-color: #ebe6ff;
+    }
+  }

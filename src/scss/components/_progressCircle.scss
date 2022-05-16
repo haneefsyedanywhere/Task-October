@@ -1,0 +1,30 @@
+.progress__circle{
+    width: 110px;
+    height: 110px;
+    position: relative;
+    margin-right: 26px;
+    &>div{
+        font-size: 36px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%) rotate(95deg);
+    }
+    transform: rotate(-95deg);
+    svg circle{
+      fill:none;
+      stroke-width:10px;
+      stroke : #000;
+      transform:translate(5px,5px);
+      stroke-dasharray:440;
+      stroke-dashoffset:440;
+      &:nth-child(1){
+        stroke-dashoffset:0;
+        stroke: #dbecf8;
+      }
+      &:nth-child(2){
+        stroke-dashoffset:250;
+        stroke: #23c0f5;
+      }
+    } 
+}

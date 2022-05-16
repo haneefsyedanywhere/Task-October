@@ -1,0 +1,46 @@
+.dashboard{
+    padding:42px 0 200px 0;
+    position: relative;
+    display: none;
+    &.show{display: inline-block;}
+    left: 50%;
+    transform: translateX(-50%);
+    &::after{
+        clear: both;
+        content: '';
+        display: table;
+    }
+    h1{
+        margin-bottom: 42px;
+    }
+    .dashboard__card_primary{
+        border-radius: 5px;
+        box-shadow: 0 1px 18px 0 rgba(0, 0, 0, 0.09), 0 6px 10px 0 rgba(0, 0, 0, 0.07);
+        background-color: white;
+        margin-right: 31px;
+        float: left;
+        padding:20px 30px;
+        &::after{
+            clear: both;
+            content: '';
+            display: table;
+        }
+        p{width: 263px;margin: 7px 0;color: $quinary;font-size: 16px;}
+        &>div{
+            float: left;
+        }
+        button{margin-bottom: 5px;}
+        .progress__circle{
+            top: 10px;
+        }
+    }
+    .dashboard__card_secondary{
+        border: 2px dashed $tertiary;
+        display: inline-block;
+        padding: 20px 30px;
+        p{
+            width: 350px;
+            margin: 7px 0;
+        }
+    }
+}

@@ -1,0 +1,107 @@
+.rates{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    padding:79px 0;
+    text-align: center;
+    display: none;
+    &.show{display: inline-block;}
+    &>p{
+        font-size: 18px;
+        color : #454f5b;
+        margin: 14px 0 60px 0;
+    }
+}
+.rates__priceFilter{
+    margin-bottom: 26px;
+    .rates__dropDown input{
+        width: 219px;
+        height: 40px;
+        padding: 10px 14px;
+        &::placeholder{color: $secondary;}
+    }       
+    .dropDown__sortByValue,.rates__dropDown input{
+        position: relative;
+        border-radius: 3px;
+        border: solid 1px $senary;
+        font-size: 14px;
+        background-image: url(../images/drop-down.png);
+        background-position: 96% center;
+        background-repeat: no-repeat;
+        cursor: pointer;
+    }
+    .dropDown__sortByValue{
+        padding: 10px 40px 10px 14px;
+        color: $quaternary;
+        span{
+            color: $secondary;
+        }
+        &+.customDropDown{
+            width: 100px;
+            right: 0;
+        }
+    }
+    .rates__dropDown{
+        float: left;
+        &:last-child{float: right;}
+        &:nth-child(2){margin: 0 17px;}
+        position: relative;
+    }
+    .customDropDown{display: none;}
+    .show{
+        display: block;
+    }
+    button{float: left;}
+    &::after{
+        clear: both;
+        content:"";
+        display: table;
+    }
+}
+.rates__lender{
+    box-shadow: 0 6px 8px 0 rgba(164, 164, 164, 0.21);
+    width: 100%;
+    border-radius: 3px;
+    border:1px solid $tertiary;
+    border-collapse: collapse;
+    text-align: left;
+    thead{
+        font-size: 13px;
+        color: $secondary;
+        background-color:#dfe3e8;
+        th{
+            padding: 14px 20px;
+            svg{
+                vertical-align: middle;
+                position: relative;
+                top: -1px;
+            }
+        }   
+    }
+    td{
+        padding: 21px;
+        vertical-align: text-top;
+        &:nth-child(1){
+            vertical-align: middle;
+            text-align: center;
+        }
+        &:nth-child(even) p:first-child{
+            font-size: 26px;
+            font-weight: 300;
+            color: #007ace;
+            line-height:1;
+        }
+        &:nth-child(odd) p:first-child{
+            font-size: 16px;
+            color: $secondary;
+            margin-bottom: 6px;
+        }
+        p{font-size: 14px;color: $quaternary;line-height: 1.57;}
+        img{margin-bottom: 25px;}
+    }
+    tr:nth-child(even){
+        td{padding: 0 20px;}
+        hr{border:1px solid $tertiary;}
+    }
+    tfoot{text-align: center;td{padding:24px 0;}}
+}

@@ -1,0 +1,30 @@
+//abstract
+@import 'abstracts/mixins';
+@import 'abstracts/variable';
+@import 'abstracts/placeholder';
+
+//base
+@import 'base/reset';
+@import 'base/base';
+@import 'base/typography';
+
+//components
+@import 'components/button';
+@import 'components/datePicker';
+@import 'components/form';
+@import 'components/dropDown';
+@import 'components/progressBar';
+@import 'components/progressCircle';
+@import 'components/loadingAnimation';
+//layout
+@import 'layout/header';
+@import 'layout/sideNav';
+@import 'layout/footer';
+@import 'layout/chooseName';
+@import 'layout/address';
+@import 'layout/upload';
+@import 'layout/rates';
+@import 'layout/results';
+@import 'layout/progress';
+@import 'layout/dashboard';
+

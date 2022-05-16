@@ -1,0 +1,143 @@
+.address{
+    display: none;
+    &.show{display: flex;}
+    padding:79px 0;
+    justify-content: space-evenly;
+    background-color:$backgroundColorSecondary;
+
+    .address__aside input,input[type="email"]{
+        @extend %inputStyle;
+        background-image: url(../images/mail-outline.svg);
+        background-position: 10px center;
+        background-repeat: no-repeat;
+        padding-left: 40px;
+    }
+    .address__aside{
+        h1,p{
+            width: 300px;
+        }
+        &>p{
+            margin: 9px 0 61px 0;
+            font-size: 14px;
+            line-height: 1.71;
+            color: $lightGrayishBlue;
+        }        
+        input{cursor: pointer;}
+    }
+    .address__form{
+        input + p{
+            margin-bottom: 30px;
+        }
+        .form__address{
+            @extend %inputStyle;
+            padding-left: 35px;
+            background-image: url(../images/room-24-px.svg);
+            background-position: 10px center;
+            background-repeat: no-repeat;
+            padding-left: 40px;
+        }
+        .form__checkbox{
+            display: flex;
+            position: relative;
+            left: -80px;
+            & + p{margin-bottom: 60px;}
+        }
+        .form__checkbox_primary{
+            @extend %inputStyle;
+            margin-top: 18px;
+            font-size: 15px;
+            cursor: pointer;
+            background-color: white;
+            line-height: 1.33;
+            color: $checkBox;
+            span{@extend %checkBox;margin: 7px 15px;}
+            & + p{margin-bottom: 18px;}
+        }
+        .checked span svg{visibility: visible;}
+        .form__checkbox_secondary{
+            @extend %inputStyle;
+            margin-left: 30px;
+            cursor: pointer;
+            background-color: white;
+            padding : 35px 0 25px 0; 
+            width: 200px;
+            height: 166px;
+            text-align: center;
+            &>svg{margin-bottom: 31px;}
+            span{@extend %checkBox;margin: 0 6px;}
+        }
+        .customChecked{
+            border-color: $primary;
+            span{            
+                border-color: $primary;
+            }
+        }
+
+        .form__dropDown{
+            margin-bottom: 60px;
+            position: relative;
+            .hideDropDown{visibility: hidden;}
+            &>.inputError{
+                width: 150px;
+                position: absolute;
+                top: 48px;
+            }
+            &>div{
+                margin-top: 14px;
+                width: 227px;
+                height: 208px;
+                margin-left: 152px;
+                position: relative;
+                border: solid 1px $senary;
+            }
+            &>div::before{
+                content: "";
+                position: absolute;
+                top: -7px;
+                right:15px;
+                width : 15px;
+                height : 15px;
+                display : inline-block;
+                background-color: white;
+                border-radius : 3px;
+                border-width: 1px;
+                border-style: solid;
+                border-color: white $senary $senary white;
+                transform : rotate(-135deg);
+            }
+            input{
+                @extend %inputStyle;
+                cursor: pointer;
+                padding:0 10px;
+                background-image: url(../images/drop-down.png);
+                background-position: 96% center;
+                background-repeat: no-repeat;
+            }
+            input + p{
+                margin-bottom: 18px;
+            }
+            ul{
+                font-size: 14px;
+                line-height: 1.43;
+                width: 100%;
+                height: 100%;
+                background-color: white;
+                overflow: auto;
+                position: relative;
+                z-index: 1;
+                border-radius: 3px;
+                color: $grayishNavy;
+                li{
+                    padding: 10px 16px;
+                    cursor: pointer;
+                    &:hover{
+                        background-color: rgba(223, 227, 232, 0.3);
+                    }
+                }
+            }
+        }
+        .btn_primary{margin-left: 30px;}
+    }
+
+
+}

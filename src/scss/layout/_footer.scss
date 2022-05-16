@@ -1,0 +1,54 @@
+footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 48px 50px 70px 50px;
+    background-color: $backgroundColorTertiary;
+    font-size: 12px;
+    position: relative;
+    p{color: $quaternary;}
+    a:hover{color: rgba($color: #000000, $alpha: 0.6);}
+    svg{cursor: pointer;}
+    @include mQ(1440px){
+        padding: 48px 70px;
+    }
+    div {
+        &>p{
+            margin-bottom: 16px;
+        }
+        li a{font-size: 14px;line-height: 2;}
+    }
+    .contact{
+        li:nth-child(1){
+            line-height: 1.75;
+            font-size: 12px;
+            a{color: $primary;}
+        }
+        li:nth-child(2){
+            font-size: 18px;
+            font-weight: normal;
+            margin: 12px 0;
+        }
+        li:nth-child(3) svg:nth-child(2){
+            margin: 0 20px;
+        }
+    }
+    .aboutUs{
+        width: 362px;
+        p{
+            margin-top: 20px;
+            font-size: 14px;
+            line-height: 1.93;
+        }
+    }
+    .copyright{
+        position: absolute;
+        bottom: 40px;
+        left: 50px;
+        @include mQ(1440px){
+            padding: 48px 70px;
+        }
+        color: #8f9ea6;
+    }
+}
+

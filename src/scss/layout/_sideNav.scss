@@ -1,0 +1,27 @@
+.sideNav{
+    height: 100%;
+    background-color: white;
+    width: 200px;
+    position: fixed;
+    left: -200px;
+    z-index: 1;
+    box-shadow: 1px 0 0 0 $tertiary ;
+    transition: transform 0.4s ease-in-out;
+    &.show{
+        transform: translateX(200px);
+    }
+    padding-top: 10px;
+    p{
+        padding : 10px 12px;
+        margin : 5px 0;
+        font-size: 14px;
+        text-align: center;
+        cursor: pointer;
+        &:hover{
+            background-color: rgba(223, 227, 232, 0.3);
+        }
+    }
+    hr{
+        border-color: rgba(223, 227, 232, 0.3);
+    }
+}

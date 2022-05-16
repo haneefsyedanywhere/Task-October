@@ -1,0 +1,128 @@
+.upload{
+    display: none;
+    &.show{display: flex;}
+    justify-content: center;
+    padding: 80px 0;
+}
+.upload__wrapper{
+    width: 630px;
+    h1{width: 537px;text-align: center;}
+    .upload__whatToUpload{
+        display: flex;
+        margin: 49px 0 30px 0;
+        div{
+            width: calc(100% / 2);
+            cursor: pointer;
+            text-align: center;
+            padding: 14px 0;
+            border: solid 1px $tertiary;
+            &.active{
+                background-color: $senary;
+            }
+            &:nth-child(1){border-radius: 3px 0 0 3px;}
+            &:nth-child(2){border-radius: 0 3px 3px 0;}
+        }
+    }
+    .photo{
+        display: none;
+        &.show{display: block;}
+        padding: 20px 0 30px 0;
+        border-radius: 3px;
+        box-shadow: 0 6px 8px 0 rgba(164, 164, 164, 0.21);
+        border: solid 1px $tertiary;
+        h3{text-align: center;}
+        hr{
+            border: solid 1px rgba(223, 227, 232,0.5);
+            margin: 15px 0;
+        }
+    }
+    .photo__content{
+        display: flex;
+        justify-content: space-evenly;
+        .photo__content__dropZone{
+            margin: 10px 0 30px 0;
+            width:329px;
+            height:250px;
+            border: 2px dashed #ccc;
+            color : #ccc;
+            font-size :18px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            svg{margin: 20px 0;}
+            p{
+                font-size: 14px;
+                position: absolute;
+                bottom: 10px;
+            }
+            &.dragover{
+                border-color:#000;
+                color:#000;
+              }
+            label{
+                color:$primary; 
+                text-decoration : underline;
+                cursor: pointer;
+            }
+        }
+        .photo__content__Info{
+            margin-left: 4px;
+            h5{margin: 18px 0 10px 0; }
+            ul{
+                font-size: 18px;
+                margin-left: 20px;
+                list-style-type: disc;
+                color: $grayishNavy;
+                li{padding-left: 5px;margin-top: 6px;}
+                ul{
+                    font-size: 16px;
+                }
+            }
+            a{
+                color: $primary;
+                position: relative;
+                top: 50px;
+                font-size: 14px;
+                text-decoration: underline;
+            }
+        }
+    }
+    .photo__uploaded{
+        padding: 0 10px;
+        background-color: $tertiary;
+        border: solid 1px $senary;
+        max-height: 300px;
+        overflow-y: auto;
+    }
+    
+    .photo__uploaded>div{
+        display: flex;
+        padding: 15px 0;
+        &:nth-child(1){
+            border-top: none;
+        }
+        border-top: solid 1px $tertiary;
+        span,svg{
+            width: calc(100% / 6);
+            display: inline-block;
+            text-align: center;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        .photo__fileDelete{cursor: pointer;}
+    }
+    .upload__buttons{
+        margin-top: 30px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .proof{
+        text-align: center;
+        font-weight: bold;
+        font-size: 50px;
+        display: none;
+        &.show{display: block;}
+    }
+}

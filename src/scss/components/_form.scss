@@ -1,0 +1,46 @@
+.form__inputHolder{
+    position: relative;
+    font-size: 14px;
+    &:hover .tooltip {
+        visibility: visible;
+    }
+  }
+input.success{
+    border-color: #18bc9c !important;
+}
+input.error{
+    border-color:   #dc3545 !important;
+}
+.inputError{
+  font-size: 12px;
+  color: red;
+  visibility: hidden;
+}
+
+  
+  .tooltip {
+    visibility: hidden;
+    background-color: black;
+    width: 300px;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    /* Position the tooltip */
+    position: absolute;
+    top :50px;
+    left: 0;
+    // transform: translateX(-50%);
+    z-index: 1;
+    &::after{
+      content: "";
+      position: absolute;
+      bottom: 100%;
+      left: 50%;
+      margin-left: -5px;
+      border-width: 5px;
+      border-style: solid;
+      border-color: transparent transparent black transparent;
+    }
+  }
+  

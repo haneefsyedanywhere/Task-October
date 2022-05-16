@@ -1,0 +1,89 @@
+
+  body{
+    overflow-x: hidden;
+  }
+
+  input:focus{
+    outline:none;
+  }
+  .row{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .container{
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  //grid for mobile 
+  @include grid(".col_");
+
+  //grid for tablets
+  @include mQ(768px){
+    @include grid(".col_md_");
+  }
+
+    //grid for laptop
+  @include mQ(980px){
+    @include grid(".col_lg_");
+  }
+  //large laptops
+  @include mQ(1245px){
+    @include grid(".col_xl_");
+  }
+
+
+
+  .wrapper{
+    height: 100vh;
+    box-sizing: border-box;
+    overflow-y: hidden;
+    background-color: white;
+  }
+
+  .hide{
+    display: none !important;
+  }
+  .application{
+    display: none;
+    &.show{
+      display: block;
+    }
+  }
+  .placeHolderEle{
+    text-align: center;
+    padding: 79px 0 280px 0;
+    font-weight: bold;
+    font-size: 100px;
+    display: none;
+    &.show{
+      display: block;
+    }
+  }
+  main{
+    background-color: $backgroundColorSecondary;
+  }
+
+  /* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background:$quaternary;
+  border-radius: 4px;
+}
+
+// /* Handle on hover */
+// ::-webkit-scrollbar-thumb:hover {
+//   background: red;
+// }
